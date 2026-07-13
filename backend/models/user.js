@@ -15,6 +15,24 @@ const userSchema = new mongoose.Schema({
     password: {
         type: String,
         required: true
+    },
+    Phonenum: {
+        type: Number,
+        required: true,
+    },
+    role: {
+        type: String,
+        enum: ["VISITOR", "EXHIBITOR", "ADMIN"],
+        default: "VISITOR"
+    },
+    //following not required only used for exhibitor role.
+     companyName: { 
+        type: String,
+        trim: true,
+    },
+    businessCategory: {
+        type: String,
+        trim: true,
     }
 }, {timestamps: true});
 
