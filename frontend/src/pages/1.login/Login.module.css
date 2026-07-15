@@ -1,0 +1,17 @@
+.loginPage{
+    height: 100vh;
+    background-color: bisque;
+}
+.header{
+    height: 80px;
+    background-color: rgba(255, 0, 0, 0.24);
+
+}
+.main{
+    background-color: rgba(0, 0, 255, 0.176);
+    height: calc(100vh - 80px);
+}
+
+.displayPanel{
+
+}
