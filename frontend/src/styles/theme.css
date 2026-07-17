@@ -1,0 +1,8 @@
+.light{
+    --bg: white;
+    --bg-contrast-matte-1: #3356be;
+}
+
+.dark{
+    --bg: #00072d;
+}

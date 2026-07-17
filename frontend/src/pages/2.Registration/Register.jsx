@@ -1,4 +1,4 @@
-function RegistrationPage() {
+function Register() {
  
  
   return (
@@ -6,4 +6,4 @@ function RegistrationPage() {
   );
 }
 
-export default RegistrationPage;
+export default Register;

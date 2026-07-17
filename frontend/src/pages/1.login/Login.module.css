@@ -1,17 +1,72 @@
 .loginPage{
     height: 100vh;
-    background-color: bisque;
 }
 .header{
+    padding: 0px 30px;
     height: 80px;
-    background-color: rgba(255, 0, 0, 0.24);
-
+    background-color: var(--bg);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
 }
+    .left-section{
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .right-section{
+        padding: 5px 15px;
+        text-align: center;
+        font-size: 18px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--color-blue-600);        
+        color: white;
+        border-radius: 5px;
+    }
+
+    
 .main{
-    background-color: rgba(0, 0, 255, 0.176);
+    background-color: var(--bg-contrast-matte-1);
     height: calc(100vh - 80px);
+    display: flex;
+    flex-flow: row nowrap;
 }
+    .displayPanel{
+        flex-basis:40%;
+        background-color: red;
+        position: relative;
+    }
+        .displayPanel img{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: right;
+        }
+        .heroSection{
+            position: absolute;
+            top:0;
+            color:white;
+        }
+    .loginPanel{
+        flex-basis: 60%;
+    }
+    
+@media (max-width: 768px){
 
-.displayPanel{
+.header{
+    padding: 0px 20px;
+    height: 60px;
+}
+    .left-section{
+        font-size: 20px;
+    }
+    .right-section{
+        padding: 4px 10px;
+        font-size: 15px;
+        background-color: var(--color-blue-600);        
+        color: white;
+        border-radius: 5px;
+    }
 
 }
+    
