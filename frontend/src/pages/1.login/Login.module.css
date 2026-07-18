@@ -1,17 +1,19 @@
 .loginPage{
-    height: 100vh;
+    height: 100dvh; 
+    /* Dynamic Viewport Height updates as mobile browser UI (address/navigation bars) appears or disappears. */
 }
 .header{
-    padding: 0px 30px;
+    padding: 0px 21px;
     height: 80px;
     background-color: var(--bg);
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 5px solid var(--bg-contrast-1);
 }
     .left-section{
-        font-size: 30px;
+        font-size: 35px;
         font-weight: 600;
     }
     .right-section{
@@ -21,26 +23,23 @@
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         background-color: var(--color-blue-600);        
         color: white;
-        border-radius: 5px;
+        border-radius: 8px;
     }
-
     
 .main{
-    background-color: var(--bg-contrast-matte-1);
-    height: calc(100vh - 80px);
+    height: calc(100vh - 80px); /* page height - header height */
     display: flex;
     flex-flow: row nowrap;
 }
     .displayPanel{
         flex-basis:40%;
-        background-color: red;
         position: relative;
     }
         .displayPanel img{
+            display: block;
             height: 100%;
             width: 100%;
             object-fit: cover;
-            object-position: right;
         }
         .heroSection{
             position: absolute;
@@ -53,20 +52,66 @@
     
 @media (max-width: 768px){
 
+.loginPage{
+    height: 100dvh;
+}
+
 .header{
     padding: 0px 20px;
     height: 60px;
+    border-bottom: 4px solid var(--bg-contrast-1);
+}
+    .left-section{
+        font-size: 28px;
+    }
+    .right-section{
+        padding: 3px 9px;
+        font-size: 15px;
+    }
+
+.main{
+    height: calc(100dvh - 60px); /* re calculate cause header got smaller*/
+    flex-flow: column nowrap;
+}
+    .displayPanel{
+        flex:0 0 40%;
+    }
+        .displayPanel img{
+            height: calc((100dvh - 60px)*40/100);
+            /*% height not working properly need fixed height. h same a .displayPanel*/
+        }
+    .loginPanel{
+        flex:0 0 60%;
+    }
+}
+    
+@media (max-width: 400px){
+ .header{
+    padding: 0px 10px;
+    height: 45px;
 }
     .left-section{
         font-size: 20px;
     }
     .right-section{
-        padding: 4px 10px;
+        padding: 2px 7px;
         font-size: 15px;
-        background-color: var(--color-blue-600);        
-        color: white;
         border-radius: 5px;
     }
 
+.main{
+    height: calc(100dvh - 45px);
 }
-    
+    .displayPanel{
+        flex:0 0 35%;
+    }
+        .displayPanel img{
+            height: calc((100dvh - 45px)*35/100);
+            /*% height not working properly need fixed height. h same a .displayPanel*/
+        }
+    .loginPanel{
+        flex:0 0 65%;
+    }
+
+
+}
