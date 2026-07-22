@@ -45,12 +45,31 @@
             position: absolute;
             top:0;
             color:white;
+            padding: 15px 15px;
         }
+            .heroSection h1{
+                margin-bottom: 5px;
+                color: rgb(252, 205, 111);
+                line-height: clamp(3rem, 3vw + 1rem, 3vw + 1rem);
+                font-size: 45px;
+                font-weight: 600;
+                text-shadow: 3px 3px 5px black;
+            }
+            .heroSection p{
+                line-height: clamp(2rem, 2vw, 4vw);
+                font-size: 26px;
+                font-weight: 500;
+                text-shadow: 4px 4px 7px rgb(0, 0, 0);
+            }
+
     .loginPanel{
         flex-basis: 60%;
     }
+        .title{
+            
+        }
     
-@media (max-width: 768px){
+@media (max-width: 814px){
 
 .loginPage{
     height: 100dvh;
@@ -80,6 +99,19 @@
             height: calc((100dvh - 60px)*40/100);
             /*% height not working properly need fixed height. h same a .displayPanel*/
         }
+        .heroSection{
+            top: 20%;
+        }
+            .heroSection h1{
+                font-size: 2.5rem;
+                font-weight: 600;
+            }
+            .heroSection p{
+                font-size: 1.5rem;
+                font-weight: 500;
+            }
+
+
     .loginPanel{
         flex:0 0 60%;
     }
@@ -109,6 +141,19 @@
             height: calc((100dvh - 45px)*35/100);
             /*% height not working properly need fixed height. h same a .displayPanel*/
         }
+        .heroSection{
+            top: 0;
+        }
+            .heroSection h1{
+                line-height: clamp(2rem, 6vw + 1rem, 10vw + 2rem);
+                font-size: 2.2rem;
+                font-weight: 600;
+            }
+            .heroSection p{
+                line-height: clamp(1.4rem, 2vw + 1rem,3rem);
+                font-size: 1.2rem;
+                font-weight: 500;
+            }
     .loginPanel{
         flex:0 0 65%;
     }
