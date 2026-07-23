@@ -1,0 +1,159 @@
+.registrationPage{
+    height: 100dvh; 
+    /* Dynamic Viewport Height updates as mobile browser UI (address/navigation bars) appears or disappears. */
+}
+.header{
+    padding: 0px 21px;
+    height: 80px;
+    background-color: var(--bg);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 5px solid var(--bg-contrast-1);
+}
+    .left-section{
+        font-size: 35px;
+        font-weight: 600;
+    }
+    .right-section{
+        padding: 5px 15px;
+        text-align: center;
+        font-size: 18px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: var(--color-blue-600);        
+        color: white;
+        border-radius: 8px;
+    }
+    
+.main{
+    height: calc(100vh - 80px); /* page height - header height */
+    display: flex;
+    flex-flow: row nowrap;
+}
+    .displayPanel{
+        flex-basis:40%;
+        position: relative;
+    }
+        .displayPanel img{
+            display: block;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        .heroSection{
+            position: absolute;
+            top:0;
+            color:white;
+            padding: 15px 15px;
+        }
+            .heroSection h1{
+                margin-bottom: 5px;
+                color: rgb(252, 205, 111);
+                line-height: clamp(3rem, 3vw + 1rem, 3vw + 1rem);
+                font-size: 45px;
+                font-weight: 600;
+                text-shadow: 3px 3px 5px black;
+            }
+            .heroSection p{
+                line-height: clamp(2rem, 2vw, 4vw);
+                font-size: 26px;
+                font-weight: 500;
+                text-shadow: 4px 4px 7px rgb(0, 0, 0);
+            }
+
+    .registrationPanel{
+        flex-basis: 60%;
+    }
+    
+@media (max-width: 814px){
+
+.registrationPage{
+    height: 100dvh;
+}
+
+.header{
+    padding: 0px 20px;
+    height: 60px;
+    border-bottom: 4px solid var(--bg-contrast-1);
+}
+    .left-section{
+        font-size: 28px;
+    }
+    .right-section{
+        padding: 3px 9px;
+        font-size: 15px;
+    }
+
+.main{
+    height: calc(100dvh - 60px); /* re calculate cause header got smaller*/
+    flex-flow: column nowrap;
+}
+    .displayPanel{
+        flex:0 0 40%;
+    }
+        .displayPanel img{
+            height: calc((100dvh - 60px)*40/100);
+            /*% height not working properly need fixed height. h same a .displayPanel*/
+        }
+        .heroSection{
+            top: 20%;
+        }
+            .heroSection h1{
+                font-size: 2.5rem;
+                font-weight: 600;
+            }
+            .heroSection p{
+                font-size: 1.5rem;
+                font-weight: 500;
+            }
+
+
+    .registrationPanel{
+        flex:0 0 60%;
+    }
+}
+    
+@media (max-width: 400px){
+ .header{
+    padding: 0px 10px;
+    height: 45px;
+}
+    .left-section{
+        font-size: 20px;
+    }
+    .right-section{
+        padding: 2px 7px;
+        font-size: 15px;
+        border-radius: 5px;
+    }
+
+.main{
+    height: calc(100dvh - 45px);
+}
+    .displayPanel{
+        flex:0 0 35%;
+    }
+        .displayPanel img{
+            height: calc((100dvh - 45px)*35/100);
+            /*% height not working properly need fixed height. h same a .displayPanel*/
+        }
+        .heroSection{
+            top: 0;
+        }
+            .heroSection h1{
+                line-height: clamp(2rem, 6vw + 1rem, 10vw + 2rem);
+                font-size: 2.2rem;
+                font-weight: 600;
+            }
+            .heroSection p{
+                line-height: clamp(1.4rem, 2vw + 1rem,3rem);
+                font-size: 1.2rem;
+                font-weight: 500;
+            }
+    .registrationPanel{
+        flex:0 0 65%;
+    }
+
+
+}
